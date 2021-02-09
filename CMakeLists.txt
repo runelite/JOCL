@@ -12,6 +12,7 @@ set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX
 project(JOCL)
 
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9")
+#set(CMAKE_OSX_ARCHITECTURES "arm64")
 
 #############################################################################
 # Add the JNI and OpenGL dependencies
