@@ -57,55 +57,6 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.4.3</version>
-
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-
-                <executions>
-
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.outputDirectory}/lib</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>${project.basedir}/nativeLibraries/</directory>
-                                    <filtering>false</filtering>
-                                    <includes>
-                                        <include>**/*.dll</include>
-                                        <include>**/*.jnilib</include>
-                                        <include>**/*.dylib</include>
-                                        <include>**/*.so</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <directory>${basedir}/../../nativeLibraries/</directory>
-                                    <filtering>false</filtering>
-                                    <includes>
-                                        <include>**/*.dll</include>
-                                        <include>**/*.jnilib</include>
-                                        <include>**/*.dylib</include>
-                                        <include>**/*.so</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-
-                </executions>
-
-            </plugin>
-
-
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
